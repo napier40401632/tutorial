@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Table</title>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script>
+		$(function() {
+			// body...
+			$('#key th').css('color','red',).css('border','solid gray');
+			$('#key tr').css('color','red').css('border','solid gray');
+			$('#key td').css('color','red').css('border','solid gray');
+			$('#key caption').css('color','red').css('border','solid gray');
+			$('#key').css('color','red').css('border','solid gray');
+			$('body').prepend($('<div/>',{text:'Hide Key',css:{color:'blue'}}));
+		});
+
+	</script>
+</head>
+<body>
+<table id="key">
+ <caption>Key</caption>
+ <tr><th>HCI</th><td>Human Computer Interaction</td></tr>
+ <tr><th>ISO</th><td>Information Systems in Organisations</td></tr>
+ <tr><th>SD</th><td>Software</td></tr>
+</table>
+</body>
+</html>

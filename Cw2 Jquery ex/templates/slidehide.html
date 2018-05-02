@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>efhef</title>
+	<script src="https://code.jquery.com/jquery.min.js" ></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#flip').click(function(){
+				$('#panel').slideToggle('slow');
+			});
+		});
+	</script>
+	<style type="text/css">
+		#panel, #flip{
+			padding: 10px;
+			text-align: center;
+			background-color: orange;
+			border: solid 1px black;
+		}
+		#panel{
+			padding: 50px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<div id="flip">slide down</div>
+<div id="panel">Hello World</div>
+</body>
+</html>

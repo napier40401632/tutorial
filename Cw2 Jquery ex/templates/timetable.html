@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js">
+	</script>
+	<script>
+		$(function() {
+			// body...
+			$('#key th').css('color','red',).css('border','solid gray');
+			$('#key tr').css('color','red').css('border','solid gray');
+			$('#key td').css('color','red').css('border','solid gray');
+			$('#key caption').css('color','red').css('border','solid gray');
+			$('#key').css('color','red').css('border','solid gray');
+			$('body').prepend($('<div/>',{text:'Hide Key',css:{color:'blue', cursor:'pointer'},
+				click:function(){
+				  ///$('#key').toggle();
+				if ($('#key:visible').length==1){
+				$('#key').fadeOut('slow');
+				$(this).text('Show Key');
+				}else{
+				$('#key').fadeIn('slow');
+				$(this).text('Hide Key');
+				}
+				}}));
+			
+			
+		});
+
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			// body...
+			$('#schedule #t1').css({
+				color:'white',
+				background:'blue'
+			});
+			$('table td:not(:empty)').mouseover(function () {
+				// body...
+				$(this).css('background','red');
+			});
+			$('table td').mouseout(function () {
+				// body...
+				$(this).css('background','inherit');
+			});
+		});
+	</script>
+</head>
+<body>
+<table id="schedule" border="1">
+	<h1>Timetable</h1>
+	<caption>Schedule</caption>
+	<tr class="t1">
+		<td></td>
+		<td>9:00</td>
+		<td>10:00</td>
+		<td>11:00</td>
+		<td>12:00</td>
+		<td>13:00</td>
+		<td>14:00</td>
+		<td>15:00</td>
+		<td>16:00</td>
+	</tr>
+	<tr class="t2">
+		<td>Mon</td>
+		<td colspan="2">INF07105 ISO</td>
+
+		<td class="2">IMD07103 HCI</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>SET07012sD</td>
+	</tr>
+	<tr class="t3">
+		<td>Tue</td>
+		<td></td>
+		<td colspan="2">SET07102 SD</td>
+		<td></td>
+		<td></td>
+		<td colspan="2">IMD07103 HCI</td>
+		<td></td>
+	</tr>
+	<tr class="t4">
+		<td>Wed</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr class="t5">
+		<td>Thu</td>
+		<td></td>
+		<td colspan="2">INF07105 ISO</td>
+		<td>INF07105 ISO</td>
+		<td></td>
+		<td colspan="2">IMD07103</td>
+		<td></td>
+	</tr>
+	<tr class="t6">
+		<td>Fri</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>SET07102</td>
+		<td>SET07102</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+<table id="key">
+ <caption>Key</caption>
+ <tr><th>HCI</th><td>Human Computer Interaction</td></tr>
+ <tr><th>ISO</th><td>Information Systems in Organisations</td></tr>
+ <tr><th>SD</th><td>Software</td></tr>
+</table>
+</body>
+</html>
+
